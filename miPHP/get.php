@@ -4,7 +4,7 @@
 // echo $_GET["name"]; 
 // echo $_GET["lastname"];
 
-// si lo cambio por ejemplo por http://localhost/Web-2-2020/get.php?name=hola&lastname=princesa
+// si lo cambio por ejemplo por http://localhost/Web-2-2020/miPHP/get.php?name=hola&lastname=princesa
 //me imprime hola princesa, porque le envie por el url el parametro de lastname, no tomando lo del input
 
 

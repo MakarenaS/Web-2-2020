@@ -1,7 +1,7 @@
 <?php
  // LO MISMO PERO CON POST, VEAMOS LA DIFERENCIA
 
- //LA URL SE QUEDA COMO http://localhost/Web-2-2020/post.php
+ //LA URL SE QUEDA COMO http://localhost/Web-2-2020/miPHP/post.php
 
 if( 
     (isset ($_POST['name']) ) && //EXISTE EL ATRIBUTO NAME 
