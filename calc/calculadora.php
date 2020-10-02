@@ -1,28 +1,6 @@
 <?php
 
-function sumar($valor1,$valor2) {
-
-    $resultado = $valor1 + $valor2;
-    echo $valor1 . " + " . $valor2 . " = " . $resultado;
-};
-
-function restar($valor1,$valor2) {
-
-    $resultado = $valor1 - $valor2;
-    echo $valor1 . " - " . $valor2 . " = " . $resultado;
-};
-
-function multiplicar($valor1,$valor2) {
-
-    $resultado = $valor1 * $valor2;
-    echo $valor1 . " * " . $valor2 . " = " . $resultado;
-};
-
-function dividir($valor1,$valor2) {
-
-    $resultado = $valor1 / $valor2;
-    echo $valor1 . " / " . $valor2 . " = " . $resultado;
-};
+require_once "operaciones.php";
 
 
 if( (isset($_GET['valor1'])) && 
@@ -36,25 +14,26 @@ if( (isset($_GET['valor1'])) &&
 
         switch($operacion){ 
             case "sumar": 
-                sumar($valor1,$valor2); 
+                $resultado = sumar($valor1,$valor2); 
                 break; 
 
             case "restar": 
-                restar($valor1,$valor2); 
+                $resultado = restar($valor1,$valor2); 
                 break; 
 
             case "multiplicar": 
-                multiplicar($valor1,$valor2);
+                $resultado = multiplicar($valor1,$valor2);
                 break; 
 
             case "dividir": 
-                dividir($valor1,$valor2);
+                $resultado = dividir($valor1,$valor2);
                 break; 
         
             default: 
                 echo "no elegiste";
                 break; 
         }
+        echo "El resultado de " . $operacion . " " . $valor1 . " y " . $valor2 . " es: " . $resultado;
     }
 
 
