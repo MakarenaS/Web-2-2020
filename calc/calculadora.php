@@ -1,12 +1,27 @@
 <?php
 
+function sumar($valor1,$valor2) {
+
+    $resultado = $valor1 + $valor2;
+    echo $valor1 . " + " . $valor2 . " = " . $resultado;
+};
+
 function restar($valor1,$valor2) {
 
-    $resta = $valor1 - $valor2;
+    $resultado = $valor1 - $valor2;
+    echo $valor1 . " - " . $valor2 . " = " . $resultado;
+};
 
-    echo "La resta de " . $valor1 ." - " . $valor2 .  " es " . $resta;
-    echo "</br>";
-    echo $valor1 . " - " . $valor2 . " = " . $resta;
+function multiplicar($valor1,$valor2) {
+
+    $resultado = $valor1 * $valor2;
+    echo $valor1 . " * " . $valor2 . " = " . $resultado;
+};
+
+function dividir($valor1,$valor2) {
+
+    $resultado = $valor1 / $valor2;
+    echo $valor1 . " / " . $valor2 . " = " . $resultado;
 };
 
 
@@ -19,12 +34,9 @@ if( (isset($_GET['valor1'])) &&
 
         $operacion = $_GET['operacionPHP'];
 
-
-        //"si estas usando un switch con muchos valores, algo estas haciendo mal" javiR
-
         switch($operacion){ 
             case "sumar": 
-                echo $valor1 + $valor2; 
+                sumar($valor1,$valor2); 
                 break; 
 
             case "restar": 
@@ -32,11 +44,11 @@ if( (isset($_GET['valor1'])) &&
                 break; 
 
             case "multiplicar": 
-                echo $valor1 * $valor2; 
+                multiplicar($valor1,$valor2);
                 break; 
 
             case "dividir": 
-                echo $valor1 / $valor2; 
+                dividir($valor1,$valor2);
                 break; 
         
             default: 
