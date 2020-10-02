@@ -164,7 +164,13 @@ echo "</br>ARRAY VALUES<br>";
 $array = array("size" => "XL", "color" => "gold");
 print_r(array_values($array));
 
+//INCLUDE
+include 'test.php';
+// include 'test.php'; // si lo pongo dos veces se va a poner dos veces, pero si uso require once solo se va a agregar una vez, ya que verifica si ya se incluyó
 
 echo "</br><br>";
 
+echo "</br><br>";
+
+echo "</br><br>";
 ?>
