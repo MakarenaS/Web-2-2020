@@ -1,0 +1,27 @@
+<!-- Construir un programa que calcule el índice de masa corporal de una persona (IMC = peso [kg] / altura [m]2) e informe el estado en el que se encuentra esa persona en función del valor de IMC. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practico 1 Ej 5</title>
+</head>
+<body>
+
+    <form action="ej5.php" method="GET">
+
+        <label for="peso">Peso en kg:</label>
+        <input type="number" name="peso" min="0">
+
+        <label for="altura">Altura en m:</label>
+        <!-- STEP MEANS KIND OF MEASUREMENT U NEED and MIN will make sure its positive -->
+        <input type="number" name="altura" step="0.01" min="0"> 
+
+        <input type="submit">
+
+    </form>
+    
+</body>
+</html>
+

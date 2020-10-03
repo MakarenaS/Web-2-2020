@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practico 1 Ej 3</title>
+</head>
+<body>
+
+<p>
+Escribir un programa que mediante un formulario html un usuario pueda ingresar su nombre, apellido y edad para que sean enviados al servidor. El programa, debe recibir los datos y mostrar la información por pantalla. 
+</p>
+
+
+<form action="ej3GET.php" method="GET">
+<h1>CON GET</h1>
+<input type="text" name="nombreG">
+<input type="text" name="apellidoG">
+<input type="number" name="edadG">
+<input type="submit">
+
+
+</form>
+
+<br>
+
+<form action="ej3POST.php" method="POST">
+    <h1>CON POST</h1>
+    <input type="text" name="nombreP">
+    <input type="text" name="apellidoP">
+    <input type="number" name="edadP">
+    <input type="submit">
+    
+    
+    </form>
+    
+    <br>
+    
+<p>
+Envíe el formulario usando los métodos POST y GET. ¿Cuál es la diferencia? ¿En qué situaciones considera mejor utilizar uno u el otro?
+</p>
+
+<p>
+    Respuesta: la diferencia está en el tipo de informacion que envio al servidor, si los parametros enviados son al azar o verificados
+    los GET tendran la informacion enviada en el URL, mientras que el POST hace el envio dentro del HTTP Request pero no permite pasarlo por parametro en la url
+</p>
+
+<p>
+Investigue las diferencias entre los arreglos $_POST $_GET y $_REQUEST de PHP
+</p>
+
+<p>
+    Respuesta: $_REQUEST Se puede usar cuando esperamos parámetros por ambos métodos.
+</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+Genere validaciones de datos en el servidor. Ningún campo puede estar vacío. ¿Cuál es la diferencia entre realizar estas verificaciones del lado del cliente o del lado del servidor? 
