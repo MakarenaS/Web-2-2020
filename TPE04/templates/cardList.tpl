@@ -1,8 +1,8 @@
-
+{include file="header.tpl"}
 
 <div class="cardList">
 
-
+{foreach $products as $product}
 
     <div class="card">
         <div class="imgBx">
@@ -16,5 +16,7 @@
             <a href="#">Comprar</a>
         </div>
     </div>    
-
+{/foreach}
 </div>
+
+{include file="footer.tpl"}
