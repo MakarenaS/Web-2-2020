@@ -1,4 +1,4 @@
-{include file="header.tpl"}
+
 
 <div class="cardList">
 
@@ -19,4 +19,3 @@
 {/foreach}
 </div>
 
-{include file="footer.tpl"}
