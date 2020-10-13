@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pepsi Website Landing Page</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+
+    <!-- https://www.youtube.com/watch?v=s_z5laE4KTw&t=30s&ab_channel=OnlineTutorials
+    https://www.youtube.com/watch?v=hlYbsAnn3LM&t=440s&ab_channel=OnlineTutorials -->
+</head>
+<body>
+
+    <section class="sec">
+
+        <header>
+            <a href="#"><img src="./img/logo.png" alt="logo" class="logo"></a>
+            
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+            
+            <ul class="navigation">
+                
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Products</a>
+                </li>
+                <li>
+                    <a href="#">What's New</a>
+                </li>
+                <li>
+                    <a href="#">Newsletter</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam non reiciendis, praesentium incidunt, earum quibusdam sint nobis reprehenderit repudiandae, veniam magni temporibus ex aut iste exercitationem nostrum. Saepe, repellendus ipsam!</p>
+                <a href="#">View All Products</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="./img/pepsi001.png" alt="" class="pepsi">
+            </div>
+
+        </div> 
+        <!-- END CONTENT -->
+
+        <!-- OJO!! HACER UN JS CORRECTO -->
+        <ul class="thumb">
+            <li><img src="./img/pepsi001.png" alt="" onclick="imgSlider('./img/pepsi001.png');changeBgColor('#0062be')"></li>
+            <li><img src="./img/pepsi002.png" alt="" onclick="imgSlider('./img/pepsi002.png');changeBgColor('#e60c2c')"></li>
+            <li><img src="./img/pepsi003.png" alt="" onclick="imgSlider('./img/pepsi003.png');changeBgColor('#1e1e1e')"></li>
+        </ul>
+
+        <ul class="sci">
+            <li><a href="#">
+                <img src="./img/facebook.png" alt="">
+            </a></li>
+            <li><a href="#">
+                <img src="./img/twitter.png" alt="">
+            </a></li>
+            <li><a href="#">
+                <img src="./img/instagram.png" alt="">
+            </a></li>
+        </ul>
+    </section>
+    
+    <!-- src="./js/main.js" -->
+    <script type="text/javascript">
+    
+    function imgSlider(anything){
+    document.querySelector('.pepsi').src = anything;
+    }
+
+    function changeBgColor(color) {
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+
+    function menuToggle() {
+        const toggleMenu = document.querySelector('.toggleMenu');
+        const navigation = document.querySelector('.navigation');
+        toggleMenu.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+</script>
+</body>
+</html>

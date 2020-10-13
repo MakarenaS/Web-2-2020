@@ -1,0 +1,30 @@
+[class*="col-"] {
+       /*REMEMBER TO TAKE THIS OFF HERE*/
+       /* border: 1px solid blue; */
+}
+
+header {
+    border: 2px solid green;
+}
+
+header .row {
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    list-style: none;
+    
+    
+}
+
+header nav ul li {
+
+    padding: 15px;
+    border: 2px solid green;
+}
