@@ -18,11 +18,6 @@ class ProductsController {
         $products = $this->model->GetProducts();
         $this->view->ShowProductInfo($products);
     }
-
-    function Prueba(){
-        $products = $this->model->GetProducts();
-        $this->view->ShowPrueba($products);
-    }
     
 }
 
