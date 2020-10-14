@@ -3,6 +3,7 @@
 
 // REQUIRES CONTROLLERS
 require_once 'Controller/ProductsController.php';
+require_once 'Controller/UserController.php';
 
 require_once 'RouterClass.php';
 
@@ -18,6 +19,11 @@ $ruta = new Router();
 //rutas
 
 $ruta->addRoute("home","GET","ProductsController","Home");
+
+//users
+
+$ruta->addRoute("login","GET","UserController","LogIn");
+
 
 //ruta por defecto
 $ruta->setDefaultRoute("ProductsController", "Home");

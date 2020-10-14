@@ -1,7 +1,8 @@
 {include file="header.tpl"}
 
-{include file="banner.tpl"}
+{* {include file="productSolo.tpl"} *}
 
-{include file="cardList.tpl"}
+{include file="productList.tpl"}
 
+{include file="productList.tpl"}
 {include file="footer.tpl"}

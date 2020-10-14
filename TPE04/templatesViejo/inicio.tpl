@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-{include file="productList.tpl"}
+{include file="banner.tpl"}
 
 {include file="cardList.tpl"}
 

@@ -1,4 +1,4 @@
-<div class="card" id="{$product->product_id}">
+<div class="card" id="{$product->id_product}">
         <h2>{$product->name}</h2>
         <p>{$product->description}</p>
         <p>{$product->price}</p>
