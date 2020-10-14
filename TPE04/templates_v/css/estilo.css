@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@100,200,300,400,500,600,700,800,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    /* height: 100vh; */
+
+    /* OJO */
+    background: #e8edf1; 
+    
+}
+
+/* HOME */
+
+.banner {
+    height: 100vh;
+    }
+
+.banner img {
+    width: 100%;
+}
+
+.cardList {
+    background: rgba(0,0,0,0.2);
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.cardList .card {
+    margin: 20px;
+    padding: 20px;
+    max-width: 450px;
+}
+.cardList .card:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+.cardList .card .imgBx {
+    width: 100%;
+    display: flex;
+    
+}
+
+.cardList .card .imgBx img {
+    width: 100%;
+}
+/* PRODUCTINFO */
+.container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+}
+
+.container .imgBx {
+    width: 600px;
+    display: flex;
+    margin-right: 10vw;
+}
+
+.container .imgBx img {
+    width: 100%;
+}
+
+.container .contentBx {
+    position: relative;
+    max-width: 600px;
+}
+
+.container .contentBx h2 {
+    color: #fff;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.container .contentBx h2 span {
+    font-size: 1.5em;
+}
+
+.container .contentBx p {
+    color: #fff;
+}
+
+.container .contentBx p.price {
+    font-size: 5em;
+}
+
+.container .contentBx a {
+    display: inline-block;  
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #fff;
+    color: #111;
+    border-radius: 40px;  
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    overflow: auto;
+    white-space: nowrap;
+    background-color: #333;
+}
+
+.navbar li {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
