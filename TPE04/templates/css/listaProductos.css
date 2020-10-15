@@ -2,12 +2,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     background: var(--shadow-color);
-
+    width: 100%;
+    margin: 10px 0;
+}
+.listaProductos h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.listaProductos .cartaBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.listaProductos .card {
+.listaProductos .cartaBx .card {
 
     width: 315px;
     
@@ -24,20 +35,20 @@
 }
 
 
-.listaProductos .card:hover {
+.listaProductos .cartaBx .card:hover {
     transition: 0.5s;
     transform: scale(1.2);
 }
 
-.listaProductos .card .imgBx {
+.listaProductos .cartaBx .card .imgBx {
     width: 150px;
 }
 
-.listaProductos .card .imgBx img {
+.listaProductos .cartaBx .card .imgBx img {
     width: 100%;
 }
 
-.listaProductos .card .contentBx {
+.listaProductos .cartaBx .card .contentBx {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,21 +57,21 @@
     background: linear-gradient(to bottom, var(--main-color),var(--shadow-color));
 }
 
-.listaProductos .card .contentBx h2 {
+.listaProductos .cartaBx .card .contentBx h2 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 2em;
     /* margin-bottom: 1em; */
 }
 
-.listaProductos .card .contentBx p {
+.listaProductos .cartaBx .card .contentBx p {
     font-weight: 400;
     
     display: none;
 }
 
 
-.listaProductos .card .contentBx p.price {
+.listaProductos .cartaBx .card .contentBx p.price {
     
     text-align: center;
     font-weight: 400;
@@ -72,7 +83,7 @@
     
 }
 
-.listaProductos .card .contentBx a {
+.listaProductos .cartaBx .card .contentBx a {
     padding: 1em;
     margin: 1em;
     text-align: center;
@@ -90,16 +101,16 @@
 
 }
 
-.listaProductos .card .contentBx a:hover {
+.listaProductos .cartaBx .card .contentBx a:hover {
     transition: 1s;
     background: var(--action-color);
 }
 
-.listaProductos .card:hover .contentBx p {
+.listaProductos .cartaBx .card:hover .contentBx p {
     transition: 2s;
     display: block;
 }
-.listaProductos .card:hover .contentBx p.price {
+.listaProductos .cartaBx .card:hover .contentBx p.price {
     transition: 5s;
     
     font-size: 2em;

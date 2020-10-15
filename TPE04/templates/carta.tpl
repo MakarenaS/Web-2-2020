@@ -1,7 +1,11 @@
+
+{foreach $products as $product}
+
+{if ($product->id_category) eq ($category->id_category)}
+    
+
 <div class="card">
-
-
-        <div class="imgBx">
+ <div class="imgBx">
 
             <img src="{$product->image_url}" alt="">
             
@@ -11,6 +15,10 @@
             <p>{$product->description}</p>
             <p class="price">{$product->price}</p>
             <a href="#">Buy Now</a>
-        </div>
-    </div>
+        </div> </div>
+{/if}
     
+    {/foreach}  
+
+
+        

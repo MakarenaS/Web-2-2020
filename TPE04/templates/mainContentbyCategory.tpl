@@ -6,9 +6,13 @@
             <h1>{$titulo_s}</h1>
 
             {include file="filtro.tpl"}
-
             {foreach $categories as $category}
+            <h1>LLEGO</h1>
+            {if {$category->id_category} eq {$category_id}}
+                
+            
             {include file="listaProductos.tpl"}
+            {/if}
             {/foreach} 
             {* {include file="listaAccordion.tpl"} *}
 

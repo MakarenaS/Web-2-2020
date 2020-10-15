@@ -1,9 +1,20 @@
+
+
+    
+
 <div class="filtro">
     <p>Filtros:</p>
     <ul>
-        <li>Todos</li>
-        <li>Computadoras</li>
-        <li>Notebooks</li>
-        <li>Perifericos</li>
+
+    {foreach $categories as $category}
+        <li>
+            <a href="{$category->id_category}">
+            {$category->nombre}
+            </a>
+        </li>
+        
+        {/foreach}
+
     </ul>
 </div>
+

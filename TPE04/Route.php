@@ -19,6 +19,9 @@ $ruta = new Router();
 //rutas
 
 $ruta->addRoute("home","GET","ProductsController","Home");
+$ruta->addRoute("productos","GET","ProductsController","Home");
+
+$ruta->addRoute("productos/:ID","GET","ProductsController","GetCatByID");
 
 //users
 

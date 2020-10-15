@@ -9,6 +9,15 @@ class ProductsModel {
         $this->db = new PDO('mysql:host=localhost;'.'dbname=db_products;charset=utf8', 'root', '');
     }
 
+    function GetCategories(){
+        
+        $query = $this->db->prepare('SELECT * FROM category');
+        $query->execute();
+        $categories = $query->fetchAll(PDO::FETCH_OBJ);
+        return $categories;
+
+    }
+
     function GetProducts(){
         
         $query = $this->db->prepare('SELECT * FROM product');
@@ -18,12 +27,9 @@ class ProductsModel {
 
     }
 
-    function GetProductByIdModel($product){
-
-        //el id pasado por parametro es lo elegido en la tabla para traer 
-        $sentencia = $this->db->prepare("SELECT * FROM product WHERE id=?");
-        $sentencia->execute(array($product));
-        return $sentencia->fetch(PDO::FETCH_OBJ);
+    function GetAllByCatID($category_id){
+        $sentencia = $this->db->prepare("SELECT FROM category WHERE id=?");
+        $sentencia->execute(array($category_id));
     }
 
 }

@@ -15,20 +15,25 @@ class ProductsController {
     }
 
     function Home(){
+        $categories = $this->model->GetCategories();
         $products = $this->model->GetProducts();
-        $this->view->ShowProductInfo($products);
+        $this->view->ShowbyCategories($categories,$products);
     }
     
-    function GetProductById($params = null) {
 
-        //OBTENGO EL ID PASADO POR PARAMETRO
-        $product_id = $params[":ID"];
-
-        $product = $this->model->GetProductByIdModel($task_id);
+    function GetCatByID($params = null){
         
-        // VER SI NECESITA EL PARAMETRO
-        $this->view->GetProductByIdView($task_id);
+        $category_id = $params[':ID'];
+        $categories = $this->model->GetCategories();
+        $products = $this->model->GetProducts();
+
+        $this->model->GetAllByCatID($category_id);
+        $this->view->ShowbyCategoriesbyID($categories,$category_id,$products);
+
+        
     }
+
+    
 }
 
 ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-15 11:31:32
-  from 'C:\xampp\htdocs\Web-2-2020\TPE04\templates\mainContent.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-15 11:35:50
+  from 'C:\xampp\htdocs\Web-2-2020\TPE04\templates\mainContentbyCategory.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f8816f45e23a6_60218769',
+  'unifunc' => 'content_5f8817f615cf00_79670596',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '64847173e15c55b235962a09e4be4e380487bd6e' => 
+    '15fa74bf034d042e1187a366aa1255c624c5b864' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Web-2-2020\\TPE04\\templates\\mainContent.tpl',
-      1 => 1602754274,
+      0 => 'C:\\xampp\\htdocs\\Web-2-2020\\TPE04\\templates\\mainContentbyCategory.tpl',
+      1 => 1602754549,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5f8816f45e23a6_60218769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f8817f615cf00_79670596 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -38,15 +38,25 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
             <?php $_smarty_tpl->_subTemplateRender("file:filtro.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
             <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'category');
 $_smarty_tpl->tpl_vars['category']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
 $_smarty_tpl->tpl_vars['category']->do_else = false;
 ?>
+            <h1>LLEGO</h1>
+            <?php ob_start();
+echo $_smarty_tpl->tpl_vars['category']->value->id_category;
+$_prefixVariable1 = ob_get_clean();
+ob_start();
+echo $_smarty_tpl->tpl_vars['category_id']->value;
+$_prefixVariable2 = ob_get_clean();
+if ($_prefixVariable1 == $_prefixVariable2) {?>
+                
+            
             <?php $_smarty_tpl->_subTemplateRender("file:listaProductos.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
+            <?php }?>
             <?php
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
