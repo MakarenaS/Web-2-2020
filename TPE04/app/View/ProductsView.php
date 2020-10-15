@@ -11,11 +11,16 @@ class ProductsView {
     function ShowProductInfo($products) {
  
         $smarty = new Smarty();
+        $smarty->assign('titulo_s', $this->title);
         $smarty->assign('products', $products);
               
-        $smarty->display('templates/inicio.tpl'); // muestro el template 
+        $smarty->display('templates/mainContent.tpl'); // muestro el template 
     }
 
+
+   function ShowHomeLocation(){
+        header("Location: ".BASE_URL."home");
+    }
 
 }
 

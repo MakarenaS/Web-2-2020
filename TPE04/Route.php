@@ -2,8 +2,8 @@
 
 
 // REQUIRES CONTROLLERS
-require_once 'Controller/ProductsController.php';
-require_once 'Controller/UserController.php';
+require_once 'app/Controller/ProductsController.php';
+require_once 'app/Controller/UserController.php';
 
 require_once 'RouterClass.php';
 

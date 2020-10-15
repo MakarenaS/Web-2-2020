@@ -18,6 +18,14 @@ class ProductsModel {
 
     }
 
+    function GetProductByIdModel($product){
+
+        //el id pasado por parametro es lo elegido en la tabla para traer 
+        $sentencia = $this->db->prepare("SELECT * FROM product WHERE id=?");
+        $sentencia->execute(array($product));
+        return $sentencia->fetch(PDO::FETCH_OBJ);
+    }
+
 }
 
 ?>
