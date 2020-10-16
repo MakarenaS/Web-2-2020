@@ -36,6 +36,7 @@ font-size: 1.5em;
 
 .mainContent .filtro ul li a {
     list-style: none;
+    text-transform: uppercase;
     color: var(--contrast-color);
 }
 

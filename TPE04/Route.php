@@ -21,12 +21,30 @@ $ruta = new Router();
 $ruta->addRoute("home","GET","ProductsController","Home");
 $ruta->addRoute("productos","GET","ProductsController","Home");
 
-$ruta->addRoute("productos/:ID","GET","ProductsController","GetCatByID");
+$ruta->addRoute("productos/:ID","GET","ProductsController","GetCatByName");
 
+
+//administracion
+
+$ruta->addRoute("admin","GET","ProductsController","showAdmin");
+
+//agregar
+
+$ruta->addRoute("insert", "POST", "ProductsController", "insertProduct");
+
+//borrar
+
+$ruta->addRoute("delete/:ID", "GET", "ProductsController", "deleteProduct");
+
+// editar
+
+$ruta->addRoute("edit/:ID", "GET", "ProductsController", "editProductPrice");
+$ruta->addRoute("editar", "POST", "ProductsController", "editAllProduct");
 //users
 
 $ruta->addRoute("login","GET","UserController","LogIn");
-
+$ruta->addRoute("logout", "GET", "UserController", "Logout");
+$ruta->addRoute("verifyUser", "POST", "UserController", "VerifyUser");
 
 //ruta por defecto
 $ruta->setDefaultRoute("ProductsController", "Home");

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-10-2020 a las 05:31:24
+-- Tiempo de generación: 16-10-2020 a las 12:47:18
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -25,6 +25,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `category`
+--
+
+CREATE TABLE `category` (
+  `id_category` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `category`
+--
+
+INSERT INTO `category` (`id_category`, `nombre`) VALUES
+(1, 'perifericos'),
+(2, 'impresoras'),
+(4, 'computadoras');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `product`
 --
 
@@ -33,28 +53,97 @@ CREATE TABLE `product` (
   `name` varchar(255) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `price` int(11) NOT NULL,
-  `image_url` varchar(255) DEFAULT NULL
+  `image_url` varchar(255) DEFAULT NULL,
+  `id_category` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `product`
+--
+
+INSERT INTO `product` (`id_product`, `name`, `description`, `price`, `image_url`, `id_category`) VALUES
+(4, 'reloj', 'grande', -10, 'https://www.cdrmedios.com/imgs/productos/productos37_23368.jpg?1928', 2),
+(5, 'gabinote', 'Compatible con\r\nSocket Intel\r\n  LGA20XX/LGA1366/LGA115X \r\n  High End Desktop i7', 1000, 'https://www.cdrmedios.com/imgs/productos/productos37_15424.jpg?7789', 4),
+(7, '\r\nTeclado Gamer Genius retroiluminado en español', 'Brillante luz de fondo (backlit) en varios colores.\r\nTeclado en español (Ñ)\r\nLas teclas del teclado en español para gaming Scorpion K215 tienen la mitad de altura que un teclado regular y duran hasta 2 millones de pulsaciones.', 1000, 'https://www.cdrmedios.com/imgs/productos/productos37_15086.jpg?30', 1),
+(8, 'Notebook Asus Dualcore ', 'Color gris (Star Grey).\r\nWindows 10 Home 64bit en Español pre instalado.\r\nProcesador Intel Celeron Dualcore N4000 1.1Ghz (hasta 2.6GHz con turbo boost).', 3223, 'https://www.cdrmedios.com/imgs/productos/productos37_23346.jpg?7156', 4),
+(9, 'notebook8888', '12', 4, 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhMWFhUXGRYYGBgYGBgZHxcaGBgYGBgaGBgbHSggGxolHRcXITEhJSorLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0mHiUtLS0tLy0tLS8rLS0uLS0vLS0tLS0wLS0tLS0tLS0tLS8tLS0tLS0tLS0tLS0tLS0tLf/AABEIAK4BIQMBIgACEQEDEQH/', 1),
+(10, '\r\nImpresora Multifunción Canon MG2510', 'Función de encendido automático.\r\nFunción de apagado automático.\r\nSoftware My Image Garden.', 1000, 'https://www.cdrmedios.com/imgs/productos/productos37_15355.jpg?3175', 2),
+(17, 'impresora', 'nueva', 1000, 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSomcIYCfgWSQkLGSeb-f-VJMO3uVAr_GS5MQ&usqp=CAU', 2),
+(18, 'speakers', 'truchos', 24, 'https://images.crutchfieldonline.com/ImageHandler/trim/620/378/products/2019/25/701/g701S801PMW-F.jpg', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `pass` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id_user`, `email`, `pass`) VALUES
+(1, 'maki', '$2y$10$T2DoFBVoKZLX7e7AkZ9ZOuv32T0Qh5mNl5hSZY6ESYcSjLcW9W4xm');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
+-- Indices de la tabla `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`id_category`);
+
+--
 -- Indices de la tabla `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`id_product`);
+  ADD PRIMARY KEY (`id_product`),
+  ADD KEY `id_category` (`id_category`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_user`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
+-- AUTO_INCREMENT de la tabla `category`
+--
+ALTER TABLE `category`
+  MODIFY `id_category` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `product`
 --
 ALTER TABLE `product`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `product`
+--
+ALTER TABLE `product`
+  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`id_category`) REFERENCES `category` (`id_category`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

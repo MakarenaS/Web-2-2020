@@ -17,12 +17,14 @@ class ProductsView {
         $smarty->display('templates/mainContent.tpl'); // muestro el template 
     }
 
-    function ShowbyCategoriesbyID($categories,$category_id,$products) {
+    
+
+    function ShowbyCategoriesbyName($categories,$parametro,$products) {
  
         $smarty = new Smarty();
         $smarty->assign('titulo_s', $this->title);
         $smarty->assign('categories', $categories);
-        $smarty->assign('category_id', $category_id);
+        $smarty->assign('parametro', $parametro);
         $smarty->assign('products', $products);
         $smarty->display('templates/mainContentbyCategory.tpl'); // muestro el template 
     }
@@ -31,6 +33,29 @@ class ProductsView {
         header("Location: ".BASE_URL."home");
     }
 
+    function showAdministracion($categories,$products) {
+
+        $smarty = new Smarty();
+        
+        $smarty->assign('titulo_s', $this->title);
+        
+        $smarty->assign('categories', $categories);
+        $smarty->assign('products', $products);
+
+        $smarty->display('templates/adminContent.tpl');
+    }
+
+    function ShowAdminLocation(){
+        header("Location: ".BASE_URL."admin");
+    }
+
+    
+
+
+    function ShowEditProduct($product){
+        //TODO hacer con Smarty
+      
+    }
 }
 
 ?>

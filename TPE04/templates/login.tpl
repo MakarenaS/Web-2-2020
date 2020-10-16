@@ -5,7 +5,7 @@
         <section id="main" class="mainContent">
             <h1>{$titulo_s}</h1>
 
-    <form action="#">
+    <form id="loginForm" action="verifyUser" method="post">
 
         <h2>Login</h2>
 
@@ -13,16 +13,18 @@
 
             <div class="inputBox">
                 <label>Username</label>
-                <input type="text" name="" placeholder="examply@xyz.com">
+                <input type="text" id="user" name="input_user" placeholder="examply@xyz.com">
             </div>
 
             <div class="inputBox">
                 <label>Password</label>
             
-                <input type="text" name="" placeholder="xxxx">
+                <input type="password" id="pass" name="input_pass" placeholder="*******">
             
             </div>
-            
+            {* CAMBIAR ESTILO *}
+            <p style="color:white;margin-top:20px;">{$message}</p>
+
             <div class="inputBox">
                 <input type="submit" name="" value="Sign In">
             </div>

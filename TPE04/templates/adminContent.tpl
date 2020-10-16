@@ -7,13 +7,24 @@
 
             {include file="filtro.tpl"}
             
-             {include file="listaAccordion.tpl"}
+            {* PRODUCTO *}
 
+
+            
+            {include file="listaAccordionAddProduct.tpl"}
+            {include file="listaAccordionDeleteProduct.tpl"}
+            {include file="listaAccordionEditProduct.tpl"} 
+
+
+
+            {* CATEGORIA *}
+            {* {include file="listaAccordionAddProduct.tpl"}
+            {include file="listaAccordionDeleteProduct.tpl"}
+            {include file="listaAccordionEditProduct.tpl"} *}
 
         <footer>
             <h2>Powered by us</h2>
         </footer>
-
 
         </section>
 

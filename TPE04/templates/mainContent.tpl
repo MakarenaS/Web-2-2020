@@ -8,15 +8,16 @@
             {include file="filtro.tpl"}
 
             {foreach $categories as $category}
+          
             {include file="listaProductos.tpl"}
+            
             {/foreach} 
-            {* {include file="listaAccordion.tpl"} *}
+            
 
 
         <footer>
             <h2>Powered by us</h2>
         </footer>
-
 
         </section>
 

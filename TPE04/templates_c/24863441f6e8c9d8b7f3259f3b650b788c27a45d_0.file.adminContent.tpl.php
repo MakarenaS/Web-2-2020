@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-10-15 21:25:38
-  from 'C:\xampp\htdocs\Web-2-2020\TPE04\templates\mainContent.tpl' */
+/* Smarty version 3.1.34-dev-7, created on 2020-10-16 02:04:32
+  from 'C:\xampp\htdocs\Web-2-2020\TPE04\templates\adminContent.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5f88a2320f8af9_95270247',
+  'unifunc' => 'content_5f88e390e92895_94233038',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '64847173e15c55b235962a09e4be4e380487bd6e' => 
+    '24863441f6e8c9d8b7f3259f3b650b788c27a45d' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\Web-2-2020\\TPE04\\templates\\mainContent.tpl',
-      1 => 1602788261,
+      0 => 'C:\\xampp\\htdocs\\Web-2-2020\\TPE04\\templates\\adminContent.tpl',
+      1 => 1602806669,
       2 => 'file',
     ),
   ),
@@ -21,11 +21,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:header.tpl' => 1,
     'file:sideMenu.tpl' => 1,
     'file:filtro.tpl' => 1,
-    'file:listaProductos.tpl' => 1,
+    'file:listaAccordionAddProduct.tpl' => 1,
+    'file:listaAccordionDeleteProduct.tpl' => 1,
+    'file:listaAccordionEditProduct.tpl' => 1,
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_5f88a2320f8af9_95270247 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f88e390e92895_94233038 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -38,23 +40,20 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
             <?php $_smarty_tpl->_subTemplateRender("file:filtro.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
-
-            <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['categories']->value, 'category');
-$_smarty_tpl->tpl_vars['category']->do_else = true;
-if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['category']->value) {
-$_smarty_tpl->tpl_vars['category']->do_else = false;
-?>
-          
-            <?php $_smarty_tpl->_subTemplateRender("file:listaProductos.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
-?>
             
-            <?php
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?> 
             
 
+            
+            <?php $_smarty_tpl->_subTemplateRender("file:listaAccordionAddProduct.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+            <?php $_smarty_tpl->_subTemplateRender("file:listaAccordionDeleteProduct.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+            <?php $_smarty_tpl->_subTemplateRender("file:listaAccordionEditProduct.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?> 
 
+
+
+                        
         <footer>
             <h2>Powered by us</h2>
         </footer>
